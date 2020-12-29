@@ -1,0 +1,27 @@
+var yP = [0];
+var xP = [200];
+var speed =2;
+
+draw  = function() {
+   background(0, 242, 255); //background
+   
+var num = random(1,400);
+xP.push(num);
+yP.push(num);    
+
+ 
+  
+  for (var i = 0; i<xP.length; i+=2) {
+  fill(xP[i], yP[i],xP[i]+yP[i] );    
+  ellipse(xP[i],yP[i],10,10);
+   yP[i]+= speed;
+  }
+  
+  for (var i = 0; i<xP.length; i++) {
+  image(getImage("avatars/leaf-red"),xP[i]+50,yP[i]-100,10,10);
+
+   yP[i]+= speed;
+  }
+    
+  
+};
