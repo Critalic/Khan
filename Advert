@@ -1,0 +1,24 @@
+var x= 200;
+var wid= 156;
+var y=0;
+draw = function() {
+    background(159, 250, 40);
+    fill(18, 120, 145);
+    textSize(40);
+    text("Plush bears!", 105, 48);
+    textSize(45);
+    text('Come get them now!',y-378, 377);
+    textSize(25);
+    fill(3, 15, 247);
+    text('Up to 50% discount!', 93, 99);
+    fill(232, 203, 18);
+    ellipse(x-wid/3, x-wid/3, wid/2.4, wid/2.4);//left ear
+    ellipse(x+wid/3, x-wid/3, wid/2.4, wid/2.4);//right ear
+    ellipse(x,x,wid,wid);//face
+    fill(13, 10, 10);
+    ellipse(x-wid/5, x-wid/5,wid/6,wid/6);//left eye
+    ellipse(x+wid/5, x-wid/5,wid/6,wid/6);//right eye
+    ellipse(x+wid/72, x+wid/10, wid/4, wid/4);//nose
+    y++;
+    wid+=0.2;
+};
