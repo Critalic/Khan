@@ -1,0 +1,32 @@
+var x = 200;
+var y = 25;
+var num = 5;
+
+
+fill(0, 255, 247);
+
+draw = function() {
+ background(242, 242, 242);
+ 
+    rectMode(CENTER);
+    rect(mouseX,300,100,20); 
+ 
+ ellipse(x,y,20,20);
+
+if( y=== 280 && mouseX<x+50 && mouseX>x-50) {
+    num = -(num);
+}
+
+if( y===0) {
+    num = 4;
+    x = random(0,400);
+}
+
+if ( y>440) {
+    y=0;
+    x = random(0,400);
+}
+
+y= y+num;
+
+};
