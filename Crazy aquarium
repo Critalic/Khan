@@ -1,0 +1,50 @@
+var centerX = 200;
+var centerY = 100;
+var bodyLength = 118;
+var bodyHeight = 74;
+
+
+var fish = function(centerX,centerY, bodyLeght, bodyHeight ) {
+noStroke();
+// body
+var bodyColor = color(random(0,400),random(0,400),random(0, 255));
+fill(bodyColor);
+ellipse(centerX, centerY, bodyLength, bodyHeight);
+// tail
+var tailWidth = bodyLength/4;
+var tailHeight = bodyHeight/2;
+fill(random(0,400), random(0,400), random(0,400));
+triangle(centerX-bodyLength/2, centerY,
+         centerX-bodyLength/2-tailWidth, centerY-tailHeight,
+         centerX-bodyLength/2-tailWidth, centerY+tailHeight);
+// eye
+fill(33, 33, 33);
+ellipse(centerX+bodyLength/4, centerY, bodyHeight/5, bodyHeight/5);
+};
+
+var rocks = function(bubX,bubY) {
+ fill(52, 66, 79);
+ellipse(bubX,bubY,100,50);
+ellipse(bubX+70,bubY,100,50);
+};
+var weed = function(wdX,wdY,wdW,wdH) {
+    image(getImage("avatars/leaf-green"), wdX,wdY, wdW,wdH);
+};
+
+ draw = function() { 
+     background(89, 216, 255);
+       weed(111,301,50,111);
+       weed(321,251,70,211);
+       rocks(25,400);
+     rocks(178,400);
+     rocks(300,400);
+     fish(centerX,centerY,random(50,118),random(20,78));
+     fish(centerX+100,centerY+250,random(50,118),random(20,78));
+     fish(centerX-90,centerY+150,random(50,118),random(20,78));
+     centerX= random(10,400);
+     centerY= random(10,350);
+     
+ };
+     
+     
+   
