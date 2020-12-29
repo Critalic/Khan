@@ -1,0 +1,27 @@
+var x= 251;
+var widh = 251;//control
+var heigt = widh;
+
+draw = function() {
+    background(175, 242, 159);
+    fill(250, 169, 55);
+    strokeWeight(1);
+    triangle(mouseX-widh/4.56,mouseY-widh/2.20, mouseX-widh/2.18,mouseY-widh/5.96,mouseX-widh/1.71, mouseY-widh/1.6);
+    triangle(mouseX+widh/80.51, mouseY-widh/2.84, mouseX+widh/2.17,mouseY-widh/5.16,mouseX+widh/1.71, mouseY-widh/1.6);
+    ellipse(mouseX, mouseY,widh,widh ); // body
+    fill(13, 11, 11);
+ ellipse(mouseX+widh/4,mouseY-widh/6,widh/7,widh/7);//left eye
+ ellipse(mouseX-widh/4,mouseY-widh/6,widh/7,widh/7);//right eye
+ stroke(3, 3, 3);
+ strokeWeight(2);
+ line(mouseX, mouseY+widh/15, mouseX-widh/3, mouseY+widh/15);
+ line(mouseX, mouseY+widh/15, mouseX-widh/3, mouseY-widh/19);
+ line(mouseX, mouseY+widh/15, mouseX+widh/3, mouseY+widh/15);
+ line(mouseX, mouseY+widh/15, mouseX+widh/3, mouseY-widh/19);
+ line(mouseX, mouseY+widh/15, mouseX+widh/3, mouseY+widh/5);
+ line(mouseX, mouseY+widh/15, mouseX-widh/3, mouseY+widh/5);
+  ellipse(mouseX, mouseY+widh/15, widh/5, widh/5);//nose
+  widh+=0.3;
+  mouseX++;
+  mouseY++;
+};
