@@ -1,0 +1,38 @@
+//an array of objects, needed to draw books
+var s = [
+ {bx: 250, by: 30, st:4, title: "Hobbit", author: " By John Tolkien"},
+ {bx: 50, by: 30, st:5, title: "Star Wars", author : "By George Lucas"},
+ {bx: 50, by: 230, st:3, title: "Star Wars", author : "By Disney" },
+ {bx: 250,by:230, st:5, title : "Top Gear", author : "I know it's a show"}
+];
+
+
+background(0, 255, 230);
+// draws shelves
+for( var i = 0; i<2;i++) {
+ fill(173, 117, 33);   
+ rect(0, 150+200*i, 400, 10);   
+}
+
+//a book drawing function
+var book = function(bx, by,title,author) {
+    fill(bx*2, by*6, by*bx);
+  rect(bx,by, 130,120);
+  fill(0, 3, 1);
+  textSize(20);
+  text( title, bx+10,by+30);
+  textSize(15);
+  text( author, bx+10,by+70);
+  
+  
+};
+//some loops
+strokeWeight(3);
+for ( var i = 0; i< s.length; i++) {
+  book(s[i].bx, s[i].by, s[i].title, s[i].author);  
+  
+  
+      for (var t = 0; t<s[i].st; t++) {
+        image(getImage("cute/Star"),s[i].bx + 20*t, s[i].by+70,40,60);
+      }
+}
