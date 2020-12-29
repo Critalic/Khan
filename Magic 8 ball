@@ -1,0 +1,58 @@
+fill(212, 26, 212);
+    textSize(20);
+    text('click a mouse anywhere at this screen', 37, 200);
+mouseClicked = function() {
+var a = floor(random(1, 4.9));
+ background(0, 255, 255);
+
+if (a ===1) {
+   image(getImage("creatures/OhNoes-Happy"), 26,28,81,82);
+    fill(240, 231, 231);
+    ellipse(194,201, 243,241);
+    fill(102, 6, 204);
+    textSize(30);
+    text("You should", 124, 173);
+    fill(255, 196, 0);
+    textSize(40);
+    text("TRY", 157, 248); 
+}
+ else if (a===2) { 
+      image(getImage("creatures/Hopper-Happy"), 26,28,81,82);
+    fill(240, 231, 231);
+    ellipse(194,201, 243,241);
+    fill(255, 0, 0);
+    textSize(30);
+    text("NO", 177, 161);
+    text("For sure NO", 116, 232); }
+ else if(a===3) {
+      image(getImage("creatures/OhNoes"), 26,28,81,82);
+     fill(240, 231, 231);
+    ellipse(194,201, 243,241);
+    fill(51, 237, 31);
+        textSize(30);
+    text("Better ", 162, 166);
+    fill(255, 0, 0);
+    text("Don't", 166, 240); 
+    }
+ else {
+      image(getImage("creatures/Hopper-Cool"), 26,28,81,82);
+     fill(240, 231, 231);
+    ellipse(194,201, 243,241);
+    fill(0, 17, 255);
+     textSize(30);
+    text("Try your", 145, 154);
+    fill(217, 0, 255);
+    textSize(40);
+    text("BEST", 149, 214); 
+    textSize(30);
+    fill(0, 17, 255);
+    text('at it', 172,262);
+    }
+    
+};
+
+
+
+
+
+
